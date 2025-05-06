@@ -21,7 +21,7 @@ const Login = () => {
     setError('');
     
     try {
-      const API_URL = process.env.REACT_APP_API_URL || 'http://52.15.67.211:8000';
+      const API_URL = process.env.REACT_APP_API_URL;
       const res = await axios.post(`${API_URL}/api/auth/login`, formData);
             
       // Guardar token y datos de usuario en localStorage
