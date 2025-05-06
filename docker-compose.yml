@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:14
+    container_name: app-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: appdb
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - app-network
+
+  backend:
+    build: ./backend
+    container_name: app-backend
+    ports:
+      - "8000:8000"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: appdb
+      DB_USER: admin
+      DB_PASSWORD: password
+      NODE_ENV: development
+    depends_on:
+      - db
+    restart: always
+    networks:
+      - app-network
+
+  frontend:
+    build: ./frontend
+    container_name: app-frontend
+    ports:
+      - "4000:4000"
+    environment:
+      REACT_APP_API_URL: http://localhost:8000/api
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
