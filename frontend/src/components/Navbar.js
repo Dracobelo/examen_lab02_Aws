@@ -13,13 +13,13 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-brand">Sistema de Gestión</Link>
+      <Link className="navbar-brand">Sistema de Gestión</Link>
       <div className="navbar-links">
         {isAuthenticated ? (
           <>
             <Link to="/clientes">Clientes</Link>
             <Link to="/productos">Productos</Link>
-            <a href="#!" onClick={handleLogout}>Cerrar Sesión</a>
+            <a href="" onClick={handleLogout}>Cerrar Sesión</a>
           </>
         ) : (
           <>

@@ -29,7 +29,7 @@ const ProductosList = () => {
         config.params.buscar = busqueda;
       }
       const API_URL = process.env.REACT_APP_API_URL;
-      const res = await axios.get(`${API_URL}/api/auth/productos`, config);
+      const res = await axios.get(`${API_URL}/api/productos`, config);
       setProductos(res.data);
       setLoading(false);
     } catch (err) {

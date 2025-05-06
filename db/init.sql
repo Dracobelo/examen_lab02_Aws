@@ -17,8 +17,13 @@ CREATE TABLE IF NOT EXISTS productos (
 );
 
 INSERT INTO productos (nombre, descripcion, precio, stock) VALUES
-('Laptop HP', 'Laptop HP Core i5 8GB RAM 256GB SSD', 899.99, 10),
-('Monitor LG', 'Monitor LG 24" Full HD', 199.99, 15),
-('Teclado Mecánico', 'Teclado mecánico RGB con switches Cherry MX', 89.99, 20),
-('Mouse Logitech', 'Mouse inalámbrico ergonómico', 45.99, 30),
-('Auriculares Sony', 'Auriculares con cancelación de ruido', 149.99, 12);
+('Tablet Samsung', 'Tablet Samsung Galaxy Tab A8 10.5" 64GB WiFi', 229.99, 18),
+('Impresora Epson', 'Impresora multifunción Epson EcoTank L3250 WiFi', 179.90, 7),
+('Disco Duro Externo', 'Disco duro externo Seagate 2TB USB 3.0', 74.99, 25),
+('Memoria RAM 16GB', 'Módulo RAM DDR4 16GB 3200MHz Kingston', 62.50, 35),
+('Router TP-Link', 'Router inalámbrico TP-Link Archer C6 AC1200', 39.99, 20),
+('Webcam Logitech', 'Webcam Logitech C920 HD Pro 1080p', 69.99, 12),
+('Silla Ergonómica', 'Silla de oficina ergonómica con soporte lumbar', 129.99, 9),
+('SSD M.2 1TB', 'Unidad SSD M.2 NVMe 1TB WD Blue SN570', 99.99, 16),
+('Monitor Curvo Samsung', 'Monitor curvo Samsung 27" Full HD 75Hz', 229.00, 11),
+('Cargador Universal', 'Cargador universal para laptop 65W', 29.50, 40);
