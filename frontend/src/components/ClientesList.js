@@ -24,7 +24,7 @@ const ClientesList = () => {
           }
         };
         
-        const res = await axios.get('http://18.118.78.25t:8000/api/clientes', config);
+        const res = await axios.get('http://18.118.78.25:8000/api/clientes', config);
         setClientes(res.data);
         setLoading(false);
       } catch (err) {

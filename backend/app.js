@@ -144,5 +144,5 @@ app.get('/api/health', (req, res) => {
 
 // Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor ejecutándose en http://18.118.78.25t:${PORT}`);
+  console.log(`Servidor ejecutándose en http://18.118.78.25:${PORT}`);
 });
