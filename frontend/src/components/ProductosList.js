@@ -29,7 +29,7 @@ const ProductosList = () => {
         config.params.buscar = busqueda;
       }
       
-      const res = await axios.get('http://localhost:8000/api/productos', config);
+      const res = await axios.get('http://18.118.78.25t:8000/api/productos', config);
       setProductos(res.data);
       setLoading(false);
     } catch (err) {

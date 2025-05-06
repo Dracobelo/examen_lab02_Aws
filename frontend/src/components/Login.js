@@ -21,7 +21,7 @@ const Login = () => {
     setError('');
     
     try {
-      const res = await axios.post('http://localhost:8000/api/auth/login', formData);
+      const res = await axios.post('http://18.118.78.25t:8000/api/auth/login', formData);
       
       // Guardar token y datos de usuario en localStorage
       localStorage.setItem('token', res.data.token);
