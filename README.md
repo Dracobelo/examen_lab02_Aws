@@ -22,3 +22,14 @@ Antes de ejecutar la aplicación, asegúrate de **modificar la IP en el archivo 
 frontend:
   environment:
     REACT_APP_API_URL: http://TU_IP_PUBLICA:8000
+```
+
+## Ejecutar Contenedores
+
+docker-compose build
+docker-compose up
+
+## Acceso a la aplicación
+Una vez que los contenedores estén en ejecución, abre tu navegador y accede a:
+
+**http://TU_IP_PUBLICA:4000**
