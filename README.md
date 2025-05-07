@@ -26,8 +26,9 @@ frontend:
 
 ## Ejecutar Contenedores
 
-docker-compose build
-docker-compose up
+- docker-compose build
+- docker-compose up -d
+- docker-compose ps (Observar el funcionamiento de los contenedores)
 
 ## Acceso a la aplicación
 Una vez que los contenedores estén en ejecución, abre tu navegador y accede a:
